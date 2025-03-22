@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Colaboradores</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-content">
+        <img src="logo.svg" alt="Logo da DSIN" class="logo" />
+        <h1>Sistema de Colaboradores</h1>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="formulario">
+        <h2>Cadastrar Novo Colaborador</h2>
+        <form id="form-colaborador">
+          <input type="text" id="nome" placeholder="Nome completo" required />
+          <input type="text" id="cargo" placeholder="Cargo" required />
+          <input
+            type="text"
+            id="departamento"
+            placeholder="Departamento"
+            required
+          />
+          <input type="date" id="data_admissao" required />
+          <button type="submit">Cadastrar</button>
+        </form>
+      </section>
+
+      <section class="tabela">
+        <h2>Colaboradores Cadastrados</h2>
+        <table id="tabela-colaboradores">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Cargo</th>
+              <th>Departamento</th>
+              <th>Data de Admissão</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2025 <a href="https://dsin.com.br" target="_blank">DSIN</a> -
+          Desenvolvimento de Soluções Inteligentes<br />
+          Desenvolvido por Jean Confertino
+        </p>
+      </div>
+    </footer>
+
+    <!-- MODAL DE EDIÇÃO -->
+    <div id="modal-edicao" class="modal">
+      <div class="modal-content">
+        <span class="close" id="fechar-modal">&times;</span>
+        <h2>Editar Colaborador</h2>
+        <form id="form-edicao">
+          <input type="hidden" id="edit-id" />
+          <input
+            type="text"
+            id="edit-nome"
+            placeholder="Nome completo"
+            required
+          />
+          <input type="text" id="edit-cargo" placeholder="Cargo" required />
+          <input
+            type="text"
+            id="edit-departamento"
+            placeholder="Departamento"
+            required
+          />
+          <input type="date" id="edit-data-admissao" required />
+          <button type="submit">Salvar Alterações</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
